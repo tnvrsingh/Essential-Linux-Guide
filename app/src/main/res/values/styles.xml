@@ -10,4 +10,9 @@
         <!-- Blue -->
     </style>
     <style name="AppTheme" parent="AppTheme.Base"></style>
+    
+    <style name="WelcomeScreenButton" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlHighlight">@color/colorPrimaryDark</item>
+        <item name="android:colorButtonNormal">@color/colorPrimary</item>
+    </style>
 </resources>
