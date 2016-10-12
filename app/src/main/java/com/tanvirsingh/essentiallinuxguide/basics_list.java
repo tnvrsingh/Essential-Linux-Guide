@@ -13,6 +13,7 @@ public class basics_list extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.basics_list_name);
         setContentView(R.layout.activity_basics_list);
 
         // Adding Toolbar to Main screen

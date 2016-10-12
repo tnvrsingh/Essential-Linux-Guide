@@ -5,4 +5,5 @@
     <string name="welcome_description">This app will help you learn, use and get familiar in any Linux based Operating System. The content and guides are designed for beginners to Linux and everyone from coders to normal users will be able to use Linux as their primary operating system by following this guide.</string>
     <string name="basics_tutorial_button_text">Learn basics!</string>
     <string name="commands_button_list">Commands List</string>
+    <string name="basics_list_name">Basics Of Linux</string>
 </resources>
