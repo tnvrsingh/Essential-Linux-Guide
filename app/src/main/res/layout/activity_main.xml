@@ -55,15 +55,37 @@
             android:layout_marginRight="10dp"
             android:textAlignment="center"/>
 
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="340dp"
+        android:layout_gravity="center">
+
         <Button
+            android:id="@+id/basics_list_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/get_started_button_text"
-            android:layout_marginTop="400dp"
-            android:layout_gravity="center"
-            android:textSize="20dp"
+            android:text="@string/basics_tutorial_button_text"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:onClick="switchToBasicsList"
+            android:theme="@style/WelcomeScreenButton"/>
+
+        <Button
+            android:id="@+id/commands_list_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commands_button_list"
+            android:layout_gravity="right"
+            android:textSize="15dp"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:theme="@style/WelcomeScreenButton"/>
+
+    </LinearLayout>
 
         </android.support.design.widget.CoordinatorLayout>
     <android.support.design.widget.NavigationView

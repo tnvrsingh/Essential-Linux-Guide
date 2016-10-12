@@ -3,5 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="welcome_text">Welcome to the Essential Linux Guide</string>
     <string name="welcome_description">This app will help you learn, use and get familiar in any Linux based Operating System. The content and guides are designed for beginners to Linux and everyone from coders to normal users will be able to use Linux as their primary operating system by following this guide.</string>
-    <string name="get_started_button_text">Get started!</string>
+    <string name="basics_tutorial_button_text">Learn basics!</string>
+    <string name="commands_button_list">Commands List</string>
 </resources>
