@@ -7,10 +7,11 @@ I've seen a lot of people who are scared of Linux, specifically the terminal thi
 **NOTE: This guide will push you do minimal (and easy but essential) research along the way. Its important. It might be challenging to find stuff but it will help you in the long run.**
 
 # Where do I start?
+The guide is available in the following locations!: 
 
 1. [The Wiki](https://github.com/tnvrsingh/Essential-Linux-Guide/wiki)
 
-2. Essential Linux Guide Play Store Link (As soon as the app is live)
+2. Essential Linux Guide Play Store Link (As soon as the app is finished)
 
 # Installation 
 
