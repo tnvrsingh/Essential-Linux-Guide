@@ -6,15 +6,20 @@ I've seen a lot of people who are scared of Linux, specifically the terminal thi
 
 **NOTE: This guide will push you do minimal (and easy but essential) research along the way. Its important. It might be challenging to find stuff but it will help you in the long run.**
 
-** I'll post some cool things people have done with Linux and some basic bash scripting here **
+# Where do I start?
+
+1. [The Wiki](https://github.com/tnvrsingh/Essential-Linux-Guide/wiki)
+
+2. Essential Linux Guide Play Store Link (As soon as the app is live)
 
 # Installation 
 
-** Google Play Store here soon as soon as the app is live
+Google Play Store here soon as soon as the app is live. Till then read the wiki here: 
+https://github.com/tnvrsingh/Essential-Linux-Guide/wiki
+
+Its a work in progress and I'm taking my time to make it approachable.
 
 # Usage
-Please use the app as a reference. Learning is all about doing and you won't make progress unless you take the plunge and start working actively with Linux.
-
-
+Please use the app or wiki as a reference. Learning is all about doing and you won't make progress unless you take the plunge and start working actively with Linux.
 
 Initial stages of writing at this in time. Stay tuned!
