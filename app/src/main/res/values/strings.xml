@@ -2,9 +2,9 @@
     <string name="app_name">Essential Linux Guide</string>
     <string name="action_settings">Settings</string>
     <string name="welcome_text">Welcome to the Essential Linux Guide</string>
-    <string name="welcome_description">This app will help you learn, use and get familiar in any Linux based Operating System. The content and guides are designed for beginners to Linux and everyone from coders to normal users will be able to use Linux as their primary operating system by following this guide.</string>
+    <string name="welcome_description">An android app and guide on Github to help beginners learn, use and adopt Linux as a daily driver. This guide/app will also help students/developers set up their development environment in Linux with minimal effort.</string>
     <string name="basics_tutorial_button_text">Learn basics!</string>
     <string name="commands_button_list">Commands List</string>
-    <string name="basics_list_name">Basics Of Linux</string>
+    <string name="basics_list_name">Basics!</string>
 
 </resources>
