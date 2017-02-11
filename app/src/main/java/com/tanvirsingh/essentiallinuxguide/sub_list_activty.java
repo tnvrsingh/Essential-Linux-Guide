@@ -1,5 +1,6 @@
 package com.tanvirsingh.essentiallinuxguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -11,11 +12,14 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class sub_list_activty extends AppCompatActivity {
 
@@ -24,19 +28,29 @@ public class sub_list_activty extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SubListAdapter mSubListAdapter;
 
+    String[] introductionToLinux = {"General Information About Linux","Why use Linux?","How to use this guide?"};
+    String[] whatIsTheTerminal = {"Introduction to the terminal","Basic Commands","How do I install applications","man pages","Command Line Arguments and How To Use Them"};
+    String[] programmersGuide = {"Pre installed Compilers and Interpreters","Text Editors"};
+
+    //Intent getintent = getIntent();
+//    Bundle extras = getIntent().getExtras();
+//    String temp = extras.getString("dataFromBasics");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Select Sub-Topic!");
         setContentView(R.layout.activity_sub_list_activty);
 
-        //adding toolbar to main screen
+        String basicsTopicString = getIntent().getExtras().getString("dataFromBasics");
 
+        Log.d(TAG, "Received " + basicsTopicString + ".");
+
+        //adding toolbar to main screen
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // set recycler view
-
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         mSubListAdapter = new SubListAdapter(sublist);
@@ -45,7 +59,8 @@ public class sub_list_activty extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mSubListAdapter);
 
-        prepareSubListData();
+        int basicsTopicInt = Integer.parseInt(basicsTopicString);
+        prepareSubListData(basicsTopicInt);
 
         // Create Navigation drawer and inflate layout
 
@@ -76,15 +91,39 @@ public class sub_list_activty extends AppCompatActivity {
 
     }
 
-    private void prepareSubListData(){
-        SubList subListObject = new SubList("Test 1");
-        sublist.add(subListObject);
+    private void prepareSubListData(int BasicsTopic){
 
-        subListObject = new SubList("Test 2");
-        sublist.add(subListObject);
+        SubList subListObject;
 
-        subListObject = new SubList("Test 3");
-        sublist.add(subListObject);
+        switch (BasicsTopic) {
+            case 0:
+                for (int i = 0; i < introductionToLinux.length; i++){
+                    subListObject = new SubList(introductionToLinux[i]);
+                    sublist.add(subListObject);
+                };
+                break;
+            case 1:
+                for (int i = 0; i < whatIsTheTerminal.length; i++){
+                    subListObject = new SubList(whatIsTheTerminal[i]);
+                    sublist.add(subListObject);
+                };
+                break;
+            case 2:
+                for (int i = 0; i < programmersGuide.length; i++){
+                    subListObject = new SubList(programmersGuide[i]);
+                    sublist.add(subListObject);
+                };
+                break;
+        }
+
+//        subListObject = new SubList("Test 1");
+//        sublist.add(subListObject);
+//
+//        subListObject = new SubList("Test 2");
+//        sublist.add(subListObject);
+//
+//        subListObject = new SubList("Test 3");
+//        sublist.add(subListObject);
 
         mSubListAdapter.notifyDataSetChanged();
     }

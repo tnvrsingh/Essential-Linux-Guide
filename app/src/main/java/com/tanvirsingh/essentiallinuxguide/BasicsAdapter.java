@@ -2,6 +2,7 @@ package com.tanvirsingh.essentiallinuxguide;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,19 +37,32 @@ public class BasicsAdapter extends RecyclerView.Adapter<BasicsAdapter.MyViewHold
                 public void onClick(View v) {
                     Log.d(TAG, "Element " + getAdapterPosition() + " clicked.");
 
+                    String basicsListAdapterPosition = Integer.toString(getAdapterPosition());
+
                     Context context = itemView.getContext();
 
-                    Intent intent;
+                    Intent intent = null;
 
+                    //Create the bundle
+                    Bundle bundle = new Bundle();
+
+                    //Add your data to bundle
+                    bundle.putString("dataFromBasics", basicsListAdapterPosition);
+
+                    //Add the bundle to the intent
+                    //i.putExtras(bundle);
                     switch(getAdapterPosition()){
                         case 0:
                             intent =  new Intent(context, sub_list_activty.class);
+                            intent.putExtras(bundle);
                             break;
                         case 1:
-                            intent =  new Intent(context, MainActivity.class);
+                            intent =  new Intent(context, sub_list_activty.class);
+                            intent.putExtras(bundle);
                             break;
-                        default:
-                            intent =  new Intent(context, MainActivity.class);
+                        case 2:
+                            intent =  new Intent(context, sub_list_activty.class);
+                            intent.putExtras(bundle);
                             break;
                     }
                     context.startActivity(intent);
