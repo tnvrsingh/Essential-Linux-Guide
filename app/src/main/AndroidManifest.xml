@@ -15,8 +15,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".basics_list"></activity>
-        <uses-permission android:name="android.permission.INTERNET"/>
+        <activity android:name=".basics_list" />
+
+        <uses-permission android:name="android.permission.INTERNET" />
+
+        <activity
+            android:name=".subList"
+            android:label="@string/title_activity_sub_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".sub_list_activty"
+            android:label="@string/title_activity_sub_list_activty"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

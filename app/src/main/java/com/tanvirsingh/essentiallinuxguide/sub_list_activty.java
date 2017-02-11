@@ -1,30 +1,36 @@
 package com.tanvirsingh.essentiallinuxguide;
 
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class basics_list extends AppCompatActivity {
-    private DrawerLayout mDrawerLayout;
-    private List<Basic> basicList = new ArrayList<>();
+public class sub_list_activty extends AppCompatActivity {
+
+    private DrawerLayout subListDrawerLayout;
+    private List<SubList> sublist = new ArrayList<>();
     private RecyclerView recyclerView;
-    private BasicsAdapter mAdapter;
+    private SubListAdapter mSubListAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(R.string.basics_list_name);
-        setContentView(R.layout.activity_basics_list);
+        setTitle("Select Sub-Topic!");
+        setContentView(R.layout.activity_sub_list_activty);
 
-        // Adding Toolbar to Main screen
+        //adding toolbar to main screen
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -33,17 +39,18 @@ public class basics_list extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        mAdapter = new BasicsAdapter(basicList);
-        final RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
+        mSubListAdapter = new SubListAdapter(sublist);
+        final RecyclerView.LayoutManager subListLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(subListLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(mAdapter);
+        recyclerView.setAdapter(mSubListAdapter);
 
-        prepareBasicsData();
+        prepareSubListData();
 
         // Create Navigation drawer and inflate layout
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+
+        NavigationView subListNavigationView = (NavigationView) findViewById(R.id.nav_view);
+        subListDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 
         // Adding menu icon to Toolbar
         ActionBar supportActionBar = getSupportActionBar();
@@ -52,8 +59,8 @@ public class basics_list extends AppCompatActivity {
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-// Set behavior of Navigation drawer
-        navigationView.setNavigationItemSelectedListener(
+        // Set behavior of Navigation drawer
+        subListNavigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     // This method will trigger on item Click of navigation menu
                     @Override
@@ -62,24 +69,24 @@ public class basics_list extends AppCompatActivity {
                         menuItem.setChecked(true);
                         // TODO: handle navigation
                         // Closing drawer on item click
-                        mDrawerLayout.closeDrawers();
+                        subListDrawerLayout.closeDrawers();
                         return true;
                     }
                 });
 
-
     }
 
-    private void prepareBasicsData() {
-        Basic basic = new Basic("Introduction to Linux");
-        basicList.add(basic);
+    private void prepareSubListData(){
+        SubList subListObject = new SubList("Test 1");
+        sublist.add(subListObject);
 
-        basic = new Basic("What is The Terminal");
-        basicList.add(basic);
+        subListObject = new SubList("Test 2");
+        sublist.add(subListObject);
 
-        basic = new Basic("Programmers guide");
-        basicList.add(basic);
+        subListObject = new SubList("Test 3");
+        sublist.add(subListObject);
 
-        mAdapter.notifyDataSetChanged();
+        mSubListAdapter.notifyDataSetChanged();
     }
+
 }

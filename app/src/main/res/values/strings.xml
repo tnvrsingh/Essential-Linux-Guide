@@ -6,5 +6,7 @@
     <string name="basics_tutorial_button_text">Learn basics!</string>
     <string name="commands_button_list">Commands List</string>
     <string name="basics_list_name">Basics!</string>
+    <string name="title_activity_sub_list">Select a subtopic</string>
+    <string name="title_activity_sub_list_activty">sub_list_activty</string>
 
 </resources>

@@ -9,10 +9,15 @@
         <item name="colorAccent">#00B0FF</item>
         <!-- Blue -->
     </style>
+
     <style name="AppTheme" parent="AppTheme.Base"></style>
-    
+
     <style name="WelcomeScreenButton" parent="Theme.AppCompat.Light">
         <item name="android:colorControlHighlight">@color/colorPrimaryDark</item>
         <item name="android:colorButtonNormal">@color/colorPrimary</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

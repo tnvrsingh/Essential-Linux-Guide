@@ -42,7 +42,7 @@ public class BasicsAdapter extends RecyclerView.Adapter<BasicsAdapter.MyViewHold
 
                     switch(getAdapterPosition()){
                         case 0:
-                            intent =  new Intent(context, MainActivity.class);
+                            intent =  new Intent(context, sub_list_activty.class);
                             break;
                         case 1:
                             intent =  new Intent(context, MainActivity.class);
