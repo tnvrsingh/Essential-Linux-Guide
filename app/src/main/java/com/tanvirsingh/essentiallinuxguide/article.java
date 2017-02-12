@@ -350,25 +350,54 @@ public class article extends AppCompatActivity {
         article = (TextView) findViewById(R.id.article);
 
         if (articleID.equals("00")) {
+
             article.setText(generalInfoAboutLinux[2]);
+            setTitle(generalInfoAboutLinux[1]);
+
         } else if (articleID.equals("01")) {
+
             article.setText(whyUseLinux[2]);
+            setTitle(whyUseLinux[1]);
+
         } else if (articleID.equals("02")) {
+
             article.setText(howToUseThisGuide[2]);
+            setTitle(howToUseThisGuide[1]);
+
         } else if (articleID.equals("10")) {
+
             article.setText(introToTerminal[2]);
+            setTitle(introToTerminal[1]);
+
         } else if (articleID.equals("11")) {
+
             article.setText(basicCommands[2]);
+            setTitle(basicCommands[1]);
+
         } else if (articleID.equals("12")) {
+
             article.setText(howtoInstallApps[2]);
+            setTitle(howtoInstallApps[1]);
+
         } else if (articleID.equals("13")) {
+
             article.setText(manpages[2]);
+            setTitle(manpages[1]);
+
         } else if (articleID.equals("14")) {
+
             article.setText(commandLineArguments[2]);
+            setTitle(commandLineArguments[1]);
+
         } else if (articleID.equals("20")) {
+
             article.setText(preinstalledCompilers[2]);
+            setTitle(preinstalledCompilers[1]);
+
         } else if (articleID.equals("21")) {
+
             article.setText(textEditors[2]);
+            setTitle(textEditors[1]);
         };
     }
 
