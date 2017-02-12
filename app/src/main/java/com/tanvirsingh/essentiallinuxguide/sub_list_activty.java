@@ -1,6 +1,7 @@
 package com.tanvirsingh.essentiallinuxguide;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -31,7 +32,7 @@ public class sub_list_activty extends AppCompatActivity {
     String[] introductionToLinux = {"General Information About Linux","Why use Linux?","How to use this guide?"};
     String[] whatIsTheTerminal = {"Introduction to the terminal","Basic Commands","How do I install applications","man pages","Command Line Arguments and How To Use Them"};
     String[] programmersGuide = {"Pre installed Compilers and Interpreters","Text Editors"};
-
+    String basicsTopicString;
     //Intent getintent = getIntent();
 //    Bundle extras = getIntent().getExtras();
 //    String temp = extras.getString("dataFromBasics");
@@ -42,9 +43,16 @@ public class sub_list_activty extends AppCompatActivity {
         setTitle("Select Sub-Topic!");
         setContentView(R.layout.activity_sub_list_activty);
 
-        String basicsTopicString = getIntent().getExtras().getString("dataFromBasics");
+        basicsTopicString = getIntent().getExtras().getString("dataFromBasics");
+        //get basics topic string for sublist adapter to be used in article
 
         Log.d(TAG, "Received " + basicsTopicString + ".");
+
+
+        //shared preferences to store basics topic
+        SharedPreferences.Editor editor = getSharedPreferences("fromBasics", MODE_PRIVATE).edit();
+        editor.putString("basicsTopic", basicsTopicString);
+        editor.apply();
 
         //adding toolbar to main screen
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -115,15 +123,6 @@ public class sub_list_activty extends AppCompatActivity {
                 };
                 break;
         }
-
-//        subListObject = new SubList("Test 1");
-//        sublist.add(subListObject);
-//
-//        subListObject = new SubList("Test 2");
-//        sublist.add(subListObject);
-//
-//        subListObject = new SubList("Test 3");
-//        sublist.add(subListObject);
 
         mSubListAdapter.notifyDataSetChanged();
     }

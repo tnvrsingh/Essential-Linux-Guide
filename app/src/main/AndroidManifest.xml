@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tanvirsingh.essentiallinuxguide">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,9 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".basics_list" />
-
-        <uses-permission android:name="android.permission.INTERNET" />
-
         <activity
             android:name=".subList"
             android:label="@string/title_activity_sub_list"
@@ -26,6 +25,14 @@
         <activity
             android:name=".sub_list_activty"
             android:label="@string/title_activity_sub_list_activty"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".article"
+            android:label="@string/title_activity_article"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".about"
+            android:label="@string/title_activity_about"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -2,6 +2,7 @@ package com.tanvirsingh.essentiallinuxguide;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
+import static android.content.Context.MODE_PRIVATE;
 import static java.security.AccessController.getContext;
 
 
@@ -49,8 +51,6 @@ public class BasicsAdapter extends RecyclerView.Adapter<BasicsAdapter.MyViewHold
                     //Add your data to bundle
                     bundle.putString("dataFromBasics", basicsListAdapterPosition);
 
-                    //Add the bundle to the intent
-                    //i.putExtras(bundle);
                     switch(getAdapterPosition()){
                         case 0:
                             intent =  new Intent(context, sub_list_activty.class);

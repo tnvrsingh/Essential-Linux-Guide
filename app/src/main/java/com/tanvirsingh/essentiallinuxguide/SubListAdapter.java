@@ -35,15 +35,13 @@ public class SubListAdapter extends RecyclerView.Adapter<SubListAdapter.MySubLis
 
                     Intent SubListintent;
 
-                    switch (getAdapterPosition()) {
-                        case 0:
-                            SubListintent = new Intent(subListContext, MainActivity.class);
-                            break;
-                        case 1:
-                            SubListintent = new Intent(subListContext, MainActivity.class);
-                            break;
+                    String  subListTopicSelected = Integer.toString(getAdapterPosition());
+
+                    switch (subListTopicSelected) {
                         default:
-                            SubListintent = new Intent(subListContext, MainActivity.class);
+                            SubListintent = new Intent(subListContext, article.class);
+                            //SubListintent.putExtras("Topic",bas);
+                            SubListintent.putExtra("SubTopic", subListTopicSelected);
                             break;
                     }
                     subListContext.startActivity(SubListintent);

@@ -8,5 +8,8 @@
     <string name="basics_list_name">Basics!</string>
     <string name="title_activity_sub_list">Select a subtopic</string>
     <string name="title_activity_sub_list_activty">sub_list_activty</string>
+    <string name="title_activity_article_web_view">ArticleWebView</string>
+    <string name="title_activity_article">article</string>
+    <string name="title_activity_about">about</string>
 
 </resources>
